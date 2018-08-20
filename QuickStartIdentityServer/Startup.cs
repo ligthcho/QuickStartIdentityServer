@@ -13,6 +13,7 @@ namespace QuickStartIdentityServer
 		{//扩展在每次启动时，为令牌签名创建了一个临时密钥。在生成环境需要一个持久化的密钥
 			services.AddIdentityServer()
 				.AddDeveloperSigningCredential()
+				.AddInMemoryIdentityResources(Config.GetIdentityResources())//添加身份验证资源
 				.AddInMemoryApiResources(Config.GetApiResources())//添加api资源
 				.AddInMemoryClients(Config.GetClients())///添加客户端
 				.AddTestUsers(Config.GetUsers()); //添加测试用户
