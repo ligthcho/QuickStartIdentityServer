@@ -1,0 +1,66 @@
+﻿@using Server.ViewModel
+@model ConsentViewModel
+<h2>ConsentPage</h2>
+@*consent*@
+<div class="row page-header">
+	<div class="col-sm-10">
+		@if(!string.IsNullOrWhiteSpace(Model.ClientLogoUrl))
+		{
+			<div>
+				<img src="@Model.ClientLogoUrl" style="width:50px;height:50px" />
+			</div>
+		}
+		<h1>@Model.ClientName</h1>
+		<p>希望使用你的账户</p>
+	</div>
+</div>
+@*客户端*@
+<div class="row">
+	<div class="col-sm-8">
+		<div asp-validation-summary="All" class="danger"></div>
+		<form asp-action="Index" method="post">
+			<input type="hidden" asp-for="ReturnUrl" />
+			@if(Model.IdentityScopes.Any())
+			{
+				<div class="panel">
+					<div class="panel-heading">
+						<span class="glyphicon glyphicon-user"></span>
+						用户信息
+					</div>
+					<ul class="list-group">
+						@foreach(var scope in Model.IdentityScopes)
+						{
+							@Html.Partial("_ScopeListitem.cshtml",scope);
+						}
+					</ul>
+				</div>
+			}
+			@if(Model.ResourceScopes.Any())
+			{
+				<ul class="list-group">
+					@foreach(var scope in Model.ResourceScopes)
+					{
+						@Html.Partial("_ScopeListitem.cshtml",scope);
+					}
+				</ul>
+			}
+			<div>
+				<label>
+					<input type="checkbox" asp-for="RemeberConsent" />
+					<strong>记住我的选择</strong>
+				</label>
+			</div>
+			<div>
+				<button name="button" value="yes" class="btn btn-primary" autofocus>同意</button>
+				<button name="button" value="no">取消</button>
+				@if(!string.IsNullOrEmpty(Model.ClientUrl))
+				{
+					<a href="@Model.ClientUrl" class="pull-right btn btn-default">
+						<span class="glyphicon glyphicon-info-sign"></span>
+						<strong>@Model.ClientUrl</strong>
+					</a>
+				}
+			</div>
+		</form>
+	</div>
+</div>

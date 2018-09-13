@@ -29,18 +29,20 @@ namespace OpenIDConnectMvc
 			services.AddAuthentication(options =>
 			{
 				options.DefaultScheme = "Cookies";
-				options.DefaultChallengeScheme = "oidc";
+				options.DefaultChallengeScheme = "oidc";//openidconnectservice
 			})
 			.AddCookie("Cookies")
 	        .AddOpenIdConnect("oidc",options =>
 	        {
 	        	options.SignInScheme = "Cookies";
 	        
-	        	options.Authority = "http://localhost:5000";
-	        	options.RequireHttpsMetadata = false;
+	        	options.Authority = "http://localhost:6005";//设置认证服务器
+				options.RequireHttpsMetadata = false;
 	        
-	        	options.ClientId = "mvc";
-	        	options.SaveTokens = true;
+	        	options.ClientId = "mvc";//openidconfig的配置信息
+				///
+				options.ClientSecret = "secret";
+				options.SaveTokens = true;
 	        });
 		}
 
@@ -60,8 +62,13 @@ namespace OpenIDConnectMvc
 
             app.UseStaticFiles();
 			app.UseMvcWithDefaultRoute();
-
- 
-        }
+			///
+			app.UseMvc(routes =>
+			{
+				routes.MapRoute(
+					name: "default",
+					template: "{controller=Home}/{action=Index}/{id?}");
+			});
+		}
     }
 }

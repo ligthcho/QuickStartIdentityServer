@@ -2,30 +2,26 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
-    "iis": {
-      "applicationUrl": "http://localhost/OpenIDConnectMvc",
-      "sslPort": 0
-    },
     "iisExpress": {
-      "applicationUrl": "http://localhost:6006/",
+      "applicationUrl": "http://localhost:5044/",
       "sslPort": 0
     }
   },
   "profiles": {
     "IIS Express": {
-      "commandName": "Project",
+      "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "OpenIDConnectMvc": {
-      "commandName": "IISExpress",
+    "Server": {
+      "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:3255/"
+      "applicationUrl": "http://localhost:6005/"
     }
   }
 }

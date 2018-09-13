@@ -9,13 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{C742EDA4-E477-46F3-AA6F-F6818D90F461}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenIDConnectMvc", "OpenIDConnectMvc\OpenIDConnectMvc.csproj", "{05F65692-CE69-452A-94D3-0EDD5463DE97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenIDConnectMvc", "OpenIDConnectMvc\OpenIDConnectMvc.csproj", "{05F65692-CE69-452A-94D3-0EDD5463DE97}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{13D688F9-5FED-490B-B5A7-8D18B674536C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProApi", "ProApi\ProApi.csproj", "{90353C34-2FCB-4932-AFC7-296617A3ABF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProApi", "ProApi\ProApi.csproj", "{90353C34-2FCB-4932-AFC7-296617A3ABF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerApi", "SerApi\SerApi.csproj", "{AC86D4E3-C622-4D1C-A607-55D8917914DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerApi", "SerApi\SerApi.csproj", "{AC86D4E3-C622-4D1C-A607-55D8917914DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenIDConnect", "OpenIDConnect", "{36F6B327-69F9-46B3-A985-1693CB5BDC15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{DA7E6209-D887-43C7-80FF-2F8688B28251}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,10 @@ Global
 		{AC86D4E3-C622-4D1C-A607-55D8917914DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC86D4E3-C622-4D1C-A607-55D8917914DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC86D4E3-C622-4D1C-A607-55D8917914DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA7E6209-D887-43C7-80FF-2F8688B28251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7E6209-D887-43C7-80FF-2F8688B28251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7E6209-D887-43C7-80FF-2F8688B28251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7E6209-D887-43C7-80FF-2F8688B28251}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +62,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{90353C34-2FCB-4932-AFC7-296617A3ABF9} = {13D688F9-5FED-490B-B5A7-8D18B674536C}
 		{AC86D4E3-C622-4D1C-A607-55D8917914DF} = {13D688F9-5FED-490B-B5A7-8D18B674536C}
+		{DA7E6209-D887-43C7-80FF-2F8688B28251} = {36F6B327-69F9-46B3-A985-1693CB5BDC15}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A29A78FC-BF6D-4835-A899-BD159FEAAE1C}
